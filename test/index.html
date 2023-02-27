@@ -5,67 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/output.css">
+    <title>Mountain View</title>
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 </head>
-<body>
-    <nav class="flex items-center justify-between bg-white p-4">
-        <div class="flex text-2xl">
+<body class="dark:bg-gray-700">
+    <nav class="flex items-center justify-between bg-white dark:bg-gray-700 p-4">
+        <div class="flex text-3xl dark:text-white">
             <a href="#" class="flex"><svg class="w-8 h-9 stroke-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>Mountain View</a>
         </div>
 
-        <div class="">
-            <ul class="flex space-x-10 p-1">
+        <div class="flex">
+            <button id="theme-toggle" type="button" class="sm:mx-8 mx-5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+            <ul id="navlist" class="space-x-10 p-1 flex hidden sm:flex">
                 <li><a href="#booking" class="text-sky-500 hover:underline">Booking</a></li>
-                <li><a href="#contacts" class="text-black hover:underline">Contacts</a></li>
-                <li><a href="#" class="text-black hover:underline">About</a></li>
+                <li><a href="#contacts" class="text-black dark:text-white hover:underline">Contacts</a></li>
+                <li><a href="#about" class="text-black dark:text-white hover:underline">About</a></li>
             </ul>
+            <div class="flex select-none sm:hidden">
+                <button id="dropdownBox" data-dropdown-toggle="dropdownlist"><svg class="w-6 h-6 stroke-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <div id="dropdownlist" class="absolute top-12 right-[0.5px] rounded bg-white dark:bg-gray-700 p-2 hidden">
+                    <ul class="p-2 divide-y divide-gray-100">
+                        <li><a href="#booking" class="block py-1 px-2 hover:underline text-sky-500">Booking</a></li>
+                        <li><a href="#contacts" class="block py-1 px-2 hover:underline dark:text-white">Contacts</a></li>
+                        <li><a href="#about" class="block py-1 px-2 hover:underline dark:text-white">About</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
     
     <div>
-        <div class="bg-fixed h-[560px] bg-center bg-cover flex justify-center text-center" style="background-image: url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg')">
-            <div class="text-6xl font-bold text-gray-50 flex flex-col justify-center select-none">
+        <div class="lg:bg-fixed h-[560px] bg-center bg-cover flex justify-center text-center" style="background-image: url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg')">
+            <div class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl  font-bold text-gray-50 flex flex-col justify-center select-none p-10">
                 <div>WELLCOME TO MOUNTAIN VIEW</div>
                 <div>Come on hiking with us</div>
             </div>
         </div>
     </div>
 
-    <div class="h-[610px]">
+    <div class="h-auto xl:h-[610px] dark:bg-gray-700">
         <div class="p-10">
-            <div id="booking" class="text-3xl font-medium" ><a href="#">#</a> Booking</div>
+            <div id="booking" class="text-3xl font-medium" >
+                <div class="flex dark:text-white">
+                    <a href="#" class="flex justify-center items-center "><svg class="w-6 h-6 stroke-sky-500" fill="none"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg></a>  
+                Booking
+                </div>
+            </div>
             <div class="text-xl p-5 text-sky-500">Available tours:</div>
         </div>
 
         
-        <div class="flex justify-between">
+        <div class="flex flex-col lg:flex-row lg:justify-between justify-center items-center md:space-y-10 lg:space-y-0">
 
-            <div class="p-6 max-w-lg mx-10 w-96 h-96 outline outline-1 outline-slate-500 rounded-3xl shadow-3xl hover:scale-110 ">
+            <div class="group/item md:p-6 max-w-lg md:mx-10 md:w-96 p-4 md:h-96 lg:h-auto m-6 md:m-0  outline outline-1 outline-gray-300 dark:outline-gray-white rounded-3xl shadow-3xl lg:hover:scale-110 hover:outline-slate-400">
                 <div class="flex items-center justify-center">
                     <img class=" h-40 rounded-lg" src="https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg" alt="aaa">
                 </div>
                 <div>
                     <div class="text-center p-2">
                         <div class="text-sky-500 text-2xl font">Everest Tour</div>
-                        <div >
+                        <div class="dark:text-slate-300">
                             Maybe we can live without libraries. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now
                         </div> 
                     </div>
         
-                    <div class="flex justify-center text-sky-500">
-                        <a href="" class="flex p-2">
+                    <div class=" flex justify-center text-sky-500">
+
+
+                        
+                        <button id="everestbutton" class=" flex p-2">
                             <div>
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </div>
-                            <div class="pl-1">
-                                Starts on March 29 2023
-                                </div>
+                            <div class="group/edit flex font-bold">
+                                Make a reservation
+                            </div>
                             </a>
                     </div>
                  </div>
             </div> 
 
 
-            <div class="p-6 max-w-lg mx-10 w-96 h-96 outline outline-1 outline-slate-500 rounded-3xl shadow-3xl hover:scale-110">
+            <div class="group/item md:p-6 max-w-lg md:mx-10 md:w-96 p-4 md:h-96 lg:h-auto m-6 md:m-0  outline outline-1 outline-slate-300 dark:outline-gray-white rounded-3xl shadow-3xl lg:hover:scale-110 hover:outline-slate-400">
                 <div class="flex items-center justify-center">
                     <img class="h-40 rounded-lg" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Kilimangiaro_foto_aerea.jpg" alt="aaa">
                 </div>
@@ -73,25 +97,28 @@
         
                     <div class="text-center p-2">
                         <div class="text-sky-500 text-2xl font">Kilimanjaro Tour</div>
-                        Maybe we can live without libraries. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now
+                        <div class="dark:text-slate-300">
+                            Maybe we can live without libraries. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now
+                        </div>
                     </div>
         
                     <div class="flex justify-center text-sky-500">
-                        <a href="" class="flex p-2">
+                        <button id="kilimanjarobutton" class="flex p-2">
                             <div>
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </div>
-                            <div class="pl-1">
-                                Starts on June 03 2023
-                                </div>
-                            </a>
+
+                            <div class="group/edit flex font-bold">
+                                Make a reservation
+                            </div>
+                        </button>
                     </div>
         
                  </div>
             </div>
 
             
-            <div class="p-6 max-w-lg mx-10 w-96 h-96 outline outline-1 outline-slate-500 rounded-3xl shadow-3xl hover:scale-110">
+            <div class="group/item md:p-6 max-w-lg md:mx-10 md:w-96 md:h-96 lg:h-auto p-4 m-6 md:m-0 outline outline-1 outline-slate-300 dark:outline-gray-white rounded-3xl shadow-3xl lg:hover:scale-110 hover:outline-slate-400">
                 <div class="flex items-center justify-center">
                     <img class="h-40 rounded-lg" src="https://cdn.britannica.com/74/114874-050-6E04C88C/North-Face-Mount-Everest-Tibet-Autonomous-Region.jpg" alt="aaa">
                 </div>
@@ -99,18 +126,20 @@
         
                     <div class="text-center p-2">
                         <div class="text-sky-500 text-2xl font">The Himalayas Tour</div>
-                        Maybe we can live without libraries. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now
+                        <div class="dark:text-slate-300">
+                            Maybe we can live without libraries. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now
+                        </div>
                     </div>
         
                     <div class="flex justify-center text-sky-500">
-                        <a href="" class="flex p-2">
+                        <button id="himalayasbutton" class="flex p-2">
                             <div>
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </div>
-                            <div class="pl-1">
-                                Starts on May 14 2023
-                                </div>
-                            </a>
+                            <div class="group/edit flex font-bold">
+                                Make a reservation
+                            </div>
+                        </button>
                     </div>
         
                  </div>
@@ -119,54 +148,336 @@
         </div>
     </div>
 
-
-
-    <div class="h-[560px] bg-gray-300 p-10">
+    <div class="h-auto md:h-[560px] bg-gray-100 dark:bg-gray-800 p-10">
         <div class="text-3xl font-medium " id="contacts">
-            <a href="#">#</a> 
-            Contacts
+            <div class="flex dark:text-white">
+                <a href="#" class="flex justify-center items-center"><svg class="w-6 h-6 stroke-sky-500" fill="none"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg></a> 
+                Contacts
+            </div>
+            
         </div>
 
-        <div class="flex justify-between p-10">
-            <div>
-                <div class="text-medium p-1 text-xl text-sky-500 flex items-center">
-                    <div class="flex "><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                    <div class="">Email us:</div>
-                </div>
+        <div class="flex flex-col md:flex-row lg:justify-between md:justify-center p-10">
+            <div>    
+                <div class="flex justify-center items-center ">
+                <div class="md:pr-10">
+                    <div class="text-medium p-1 pb-6 text-xl text-sky-500 flex items-center">
+                        <div class="flex "><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+                        <div class="dark:text-white">Email us:</div>
+                    </div>
 
-                <div class="pr-10">
-                    <label class="p-1">Name/Nickname</label>
+                    <label class="p-1 dark:text-white">Name/Nickname</label>
                     <br>
-                    <input type="text" placeholder="John" required class="rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                    <input type="text" placeholder="John" required class="dark:bg-slate-500 rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                     <br>
-                    <label class="p-1">Email</label>
+                    <label class="p-1 dark:text-white">Email</label>
                     <br>
-                    <input type="email" placeholder="exemple@gmail.com" required class="rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                    <input type="email" placeholder="exemple@gmail.com" required class="dark:bg-slate-500 rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                     <br>
-                    <label class="p-1">Message</label>
+                    <label class="p-1 dark:text-white">Message</label>
                     <br>
-                    <textarea maxlength="120" style="resize: horizontal; max-width: 210px; min-width: 210px;"  type="text" rows="5" cols="30" required class="vertical rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                    <textarea maxlength="120" style="resize: horizontal; max-width: 210px; min-width: 210px;"  type="text" rows="5" cols="30" required class="dark:bg-slate-500 vertical rounded-xl p-2 border border-slate-300 text-sm placeholder-slate-400 text-slate-600 outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                     </textarea>
                     <br>
                     <button class="w-20 h-auto bg-sky-500 rounded-full text-white p-1 text-lg font-medium hover:bg-sky-600 cursor-no-drop">Submit</button>
                 </div>
             </div>
+        </div>
 
-            <div class="p-10">
-                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full px-5 hover:ring-pink-500"><img alt="Instagram icon" srcset="https://img.icons8.com/fluency/2x/instagram-new.png 2x"><div class="text-pink-700 pl-1">@mountainview</div></a></div>
-                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full px-5 hover:ring-blue-500 w-auto"><img alt="Facebook icon" srcset="https://img.icons8.com/fluency/2x/facebook-new.png 2x"><div class="pl-1 text-blue-500">@mountainview_official</div></a></div>
-                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full px-5 hover:ring-sky-500"><img alt="Twitter icon" srcset="https://img.icons8.com/fluency/2x/twitter.png 2x"><div class="pl-1 text-sky-500">@mountainview_tours</div></a></div>
-                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full px-5 hover:ring-red-500"><img alt="YouTube icon" srcset="https://img.icons8.com/fluency/2x/youtube-play.png 2x"><div class="text-red-700 pl-1">@mountainview</div></a></div>
+            <div class="py-10 md:p-10 flex flex-col sm:justify-center sm:items-center">
+                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full md:px-5 hover:ring-pink-500"><img alt="Instagram icon" srcset="https://img.icons8.com/fluency/2x/instagram-new.png 2x"><div class="text-pink-700 pl-1">@mountainview</div></a></div>
+                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full md:px-5 hover:ring-blue-500 w-auto"><img alt="Facebook icon" srcset="https://img.icons8.com/fluency/2x/facebook-new.png 2x"><div class="pl-1 text-blue-500">@mountainview_official</div></a></div>
+                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full md:px-5 hover:ring-sky-500"><img alt="Twitter icon" srcset="https://img.icons8.com/fluency/2x/twitter.png 2x"><div class="pl-1 text-sky-500">@mountainview_tours</div></a></div>
+                <div class="p-2"><a href="#" class="flex items-center hover:ring hover:rounded-full md:px-5 hover:ring-red-500"><img alt="YouTube icon" srcset="https://img.icons8.com/fluency/2x/youtube-play.png 2x"><div class="text-red-700 pl-1">@mountainview</div></a></div>
             </div>
 
-            <div class="flex items-center justify-center ml-10">
-                <img class="w-[500px] hover:scale-110" src="https://repthewild.com/wp-content/uploads/2021/09/Hiking-1024x799.png" alt="">
+            <div class="flex items-center justify-center md:ml-10 md:hidden lg:flex">
+                <img class="md:w-[500px] hover:scale-110" src="https://repthewild.com/wp-content/uploads/2021/09/Hiking-1024x799.png" alt="">
             </div>
         </div>
     </div>
 
 
-    <div class="h-[560px] p-10"></div>
+    <div class="h-auto lg:h-[560px] p-6 bg-sky-200 dark:bg-slate-600">
+        <div class="text-3xl font-medium flex justify-between" id="about">
+            <div class="flex ">
+                <a href="#" class="flex justify-center items-center"><svg class="w-6 h-6 stroke-sky-500" fill="none"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg></a> 
+                <div class="text-black dark:text-white"> About</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="pt-10 md:p-10 flex flex-col lg:justify-between md:flex-col lg:flex-row">
+
+            <div class="flex justify-center items-center">
+                <div class="p-1 ">
+                    <div class="bg-white dark:bg-gray-700 md:w-96 h-auto rounded-xl p-2 text-center hover:ring hover:ring-sky-500">
+                        <div class="font-bold p-1 text-xl text-slate-700 dark:text-white">Who we are?</div>
+                        <div class="flex justify-center items-center text-center text-slate-600 dark:text-slate-300">
+                            Cras at mi dolor. Aliquam sit amet bibendum neque, sed lacinia urna. Curabitur a augue ipsum. Mauris rutrum justo id orci rhoncus vehicula. In hac habitasse platea dictumst. Aenean massa augue, sodales sed placerat ac, viverra et ipsum. 
+                        </div> 
+                    </div>
+
+
+                    <div class="bg-white dark:bg-gray-700 md:w-96 h-auto rounded-xl p-2 text-center hover:ring hover:ring-sky-500 mt-10">
+                        <div class="font-bold p-1 text-xl text-slate-700 dark:text-white">What we do?</div>
+                        <div class="flex justify-center items-center text-center text-slate-600 dark:text-slate-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed venenatis elit. Nam consequat eu risus ac hendrerit. Quisque diam ligula, bibendum in elit eget, lobortis viverra odio. Maecenas ligula ligula, malesuada eu tellus a, vestibulum condimentum dui. Curabitur sed ipsum ipsum.
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center">
+            <div class="w-[300px] sm:w-[450px] md:w-[650px] lg:w-[500px] h-[416px] xl:w-[650px] bg-white dark:bg-gray-700 rounded-xl mt-10 md:mt-0">
+                <div class="flex text-center justify-center p-3 text-2xl font-bold text-slate-700 dark:text-white">Our bots</div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="py-2">
+                        <div class="group/item w-64 p-3 bg-gray-300 dark:bg-slate-400 rounded-3xl flex justify-between items-center ">
+                        <div class="flex items-center "><img class="rounded-full w-[20%]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXg70J8td4HQA6_zLYKYDaFWpSeGMjT-fSng&usqp=CAU" alt="">
+                        <div class="px-3 dark:text-slate-300">Ethan Decline</div>  
+                        </div>
+                        <div class="group/edit invisible hover:text-slate-500 group-hover/item:visible"><svg fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                        </svg></div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="py-2">
+                        <div class="group/item w-64 p-3 bg-gray-300 dark:bg-slate-400 rounded-3xl flex justify-between items-center ">
+                        <div class="flex items-center "><img class="rounded-full w-[20%]" src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-24360,resizemode-1,msid-94421929/news/international/us/who-is-andrew-tate-one-of-the-most-googled-person-in-the-world.jpg" alt="">
+                        <div class="px-3 dark:text-slate-300">Boto Copranto</div>  
+                        </div>
+                        <div class="group/edit invisible hover:text-slate-500 group-hover/item:visible"><svg fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                          </svg></div>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <div class="group/item w-64 p-3 bg-gray-300 dark:bg-slate-400 rounded-3xl flex justify-between items-center ">
+                        <div class="flex items-center "><img class="rounded-full w-[20%]" src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="">
+                        <div class="px-3 dark:text-slate-300">Luigii Ferrari</div>  
+                        </div>
+                        <div class="group/edit invisible hover:text-slate-500 group-hover/item:visible"><svg fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                          </svg></div>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <div class="group/item w-64 p-3 bg-gray-300 dark:bg-slate-400 rounded-3xl flex justify-between items-center ">
+                        <div class="flex items-center "><img class="rounded-full w-[20%]" src="https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg" alt="">
+                        <div class="px-3 dark:text-slate-300">COco Versace</div>  
+                        </div>
+                        <div class="group/edit invisible hover:text-slate-500 group-hover/item:visible"><svg fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                          </svg></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="py-2">
+                        <div class="group/item w-64 p-3 bg-gray-300 dark:bg-slate-400 rounded-3xl flex justify-between items-center ">
+                        <div class="flex items-center "><img class="rounded-full w-[20%]" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+                        <div class="px-3 dark:text-slate-300">Any Pany</div>  
+                        </div>
+                        <div class="group/edit invisible hover:text-slate-500 group-hover/item:visible"><svg fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                          </svg></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+        </div>
+
+    </div>
+    </div>
+
+    <div class="w-full h-auto bg-white dark:bg-gray-700 p-5 select-none">
+        <div class="flex justify-center items-center text-[12px] text-center p-1 dark:text-slate-400">
+            Not all rights are reserved
+            <br>
+            The rights of photos and svgs are hold by their authors
+            <br>
+            Used for learning and/or fun purposes
+            <br>
+            To contact the author of website please send an email on contacts section of the page.
+        </div>
+    </div>  
+
+    <div id="everestmenu" class="hidden p-10 fixed top-0 right-0 left-0 bottom-0 w-full backdrop-blur-[5px] flex items-center justify-center">  
+        <div>
+            
+            <div class="w-[300px] sm:w-96 h-[500px] bg-white dark:bg-gray-600 rounded-3xl p-4">
+                <div class="flex justify-between">
+                        <div></div>
+                        <button id="close2">
+                            <svg fill="none" class="w-6 h-6 dark:text-white" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div>
+                        <div class="flex justify-center items-center text-3xl font-bold text-sky-500">Everest Tour</div>
+                        <div class="flex justify-center items-center text-lg text-gray-500 dark:text-white">Booking</div>
+                    </div>
+
+                    <div class="p-3 flex justify-center items-center">
+                        <div>
+                            <div class="dark:text-white">Name and Surname</div>
+                            <input type="text" class=" border border-slate-300 p-1 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Email</div>
+                            <input type="email" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Phone number</div>
+                            <input type="tel" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Select a date</div>
+                            <select class="dark:text-slate-600 p-1 bg-white dark:bg-gray-400 dark:placeholder-white rounded-lg border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"" name="cars" id="cars">
+                                <option value="January_3">January 3 2023</option>
+                                <option value="January_6">January 6 2023</option>
+                                <option value="January_15">January 15 2023</option>
+                                <option value="January_23">January 23 2023</option>
+                                <option value="February_3">February 3 2023</option>
+                                <option value="February_6">February 6 2023</option>
+                                <option value="February_24">February 24 2023</option>
+                                <option value="February_26">February 26 2023</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center p-5">
+                        <button class="w-20 h-auto bg-sky-500 rounded-full text-white p-1 text-lg font-medium hover:bg-sky-600">Submit</button>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="kilimanjaromenu" class="hidden p-10 fixed top-0 right-0 left-0 bottom-0 w-full backdrop-blur-[5px] flex items-center justify-center">  
+        <div>
+            
+            <div class="w-[300px] sm:w-96 h-[500px] bg-white dark:bg-gray-600 rounded-3xl p-4">
+                <div class="flex justify-between">
+                        <div></div>
+                        <button id="close3">
+                            <svg fill="none" class="w-6 h-6 dark:text-white" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div>
+                        <div class="flex justify-center items-center text-3xl font-bold text-sky-500">Kilimanjaro Tour</div>
+                        <div class="flex justify-center items-center text-lg text-gray-500 dark:text-white">Booking</div>
+                    </div>
+
+                    <div class="p-3 flex justify-center items-center">
+                        <div>
+                            <div class="dark:text-white">Name and Surname</div>
+                            <input type="text" class=" border border-slate-300 p-1 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Email</div>
+                            <input type="email" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Phone number</div>
+                            <input type="tel" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Select a date</div>
+                            <select class="p-1 bg-white dark:bg-gray-400 dark:text-slate-600 rounded-lg border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"" name="cars" id="cars">
+                                <option value="January_3">January 3 2023</option>
+                                <option value="January_6">January 6 2023</option>
+                                <option value="January_15">January 15 2023</option>
+                                <option value="January_23">January 23 2023</option>
+                                <option value="February_3">February 3 2023</option>
+                                <option value="February_6">February 6 2023</option>
+                                <option value="February_24">February 24 2023</option>
+                                <option value="February_26">February 26 2023</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center p-5">
+                        <button class="w-20 h-auto bg-sky-500 rounded-full text-white p-1 text-lg font-medium hover:bg-sky-600">Submit</button>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="himalayasmenu" class="hidden p-10 fixed top-0 right-0 left-0 bottom-0 w-full backdrop-blur-[5px] flex items-center justify-center">  
+        <div>
+            
+            <div class="w-[300px] sm:w-96 h-[500px] bg-white dark:bg-gray-600 rounded-3xl p-4">
+                <div class="flex justify-between">
+                        <div></div>
+                        <button id="close4">
+                            <svg fill="none" class="w-6 h-6 dark:text-white" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div>
+                        <div class="flex justify-center items-center text-3xl font-bold text-sky-500">Himalayas Tour</div>
+                        <div class="flex justify-center items-center text-lg text-gray-500 dark:text-white">Booking</div>
+                    </div>
+
+                    <div class="p-3 flex justify-center items-center">
+                        <div>
+                            <div class="dark:text-white">Name and Surname</div>
+                            <input type="text" class=" border border-slate-300 p-1 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Email</div>
+                            <input type="email" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Phone number</div>
+                            <input type="tel" class="p-1 border border-slate-300 rounded-lg dark:bg-gray-400 dark:placeholder-white placeholder-slate-500 text-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                            <div class="dark:text-white">Select a date</div>
+                            <select class="dark:bg-gray-400 dark:text-slate-600 p-1 bg-white rounded-lg border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"" name="cars" id="cars">
+                                <option value="January_3">January 3 2023</option>
+                                <option value="January_6">January 6 2023</option>
+                                <option value="January_15">January 15 2023</option>
+                                <option value="January_23">January 23 2023</option>
+                                <option value="February_3">February 3 2023</option>
+                                <option value="February_6">February 6 2023</option>
+                                <option value="February_24">February 24 2023</option>
+                                <option value="February_26">February 26 2023</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center p-5">
+                        <button class="w-20 h-auto bg-sky-500 rounded-full text-white p-1 text-lg font-medium hover:bg-sky-600">Submit</button>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+
+    
+
+
+
 
     <script src="script.js"></script>
 </body>
